@@ -1,0 +1,7 @@
+{
+    "code": "404",
+    "message": "not found",
+    "data": {
+        "message": "Document not found."
+    }
+}

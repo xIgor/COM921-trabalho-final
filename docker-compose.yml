@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+    node:
+        image: node:10.6.0-alpine
+        environment:
+            - SERVERNAME=webserver
+        volumes:
+            - .:/srv/vhosts/phpApp
+        working_dir: /srv/vhosts/phpApp
+        command: /bin/sh -c "npm install && npm run dev"
+        ports:
+            - 3000:3000
+            - 3001:3001
+        depends_on:
+            - webserver
+
+    webserver:
+        image: marciodojr/phpstart-apache-docker-image:dev
+        environment:
+            - APP_SECRET=holly_molly!
+        working_dir: /srv/vhosts/phpApp
+        volumes:
+            - .:/srv/vhosts/phpApp
+            - ./.docker/php/php-ini-overrides.ini:/etc/php/7.2/apache2/conf.d/99-overrides.ini
+            - ./.docker/apache/vhost.conf:/etc/apache2/sites-available/000-default.conf
+        ports:
+            - 2999:80

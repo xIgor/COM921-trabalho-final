@@ -1,0 +1,52 @@
+{
+    "code": 200,
+    "message": "success",
+    "data": {
+        "tags": [
+            "Investimentos",
+            "Crédito",
+            "Intercâmbio",
+            "Financiamentos",
+            "Dívidas",
+            "Cursos"
+        ],
+        "posts": [
+            {
+                "id": 1,
+                "tag": "#Investimentos",
+                "title": "Como funciona o investimento P2P (Peer-to-Peer)?",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique iaculis, dui elit porttitor dolor Cras nec ligula est. Morbi commodo et ipsum vitae fringilla. "
+            },
+            {
+                "id": 2,
+                "tag": "#Financiamentos",
+                "title": "Vantagens de solicitar um Financiamento",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique."
+            },
+            {
+                "id": 3,
+                "tag": "#Crédito",
+                "title": "Vantagens de solicitar um Financiamento",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique iaculis, dui elit porttitor dolor."
+            },
+            {
+                "id": 4,
+                "tag": "#Dívidas",
+                "title": "Posso financiar minhas dívidas?",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique iaculis, dui elit porttitor dolor Cras nec ligula est. Morbi commodo et ipsum vitae fringilla. ."
+            },
+            {
+                "id": 5,
+                "tag": "#Investimentos",
+                "title": "Vantagens de solicitar um Financiamento",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique iaculis, dui elit porttitor dolor Cras nec ligula est. Morbi commodo et ipsum vitae fringilla. "
+            },
+            {
+                "id": 6,
+                "tag": "#Investimentos",
+                "title": "Vantagens de solicitar um Financiamento",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique iaculis, dui elit porttitor dolor Cras nec ligula est. Morbi commodo et ipsum vitae fringilla. "
+            }
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+.extract-table {
+    margin-bottom: $extract-table-margin-bottom;
+}
+
+.extract-table-header {
+    background-color: $extract-table-purple;
+    padding: 25px 20px 20px 20px;
+    height: 70px;
+}
+
+%row-border{
+    border-bottom: 1px solid $extract-table-gray;
+    border-left: 1px solid $extract-table-gray;
+    border-right: 1px solid $extract-table-gray;
+}
+
+.extract-table-sub-header{
+    padding: 15px 20px 15px 20px;
+    @extend %row-border;
+    height: 80px;
+    color: $extract-table-purple;
+
+    .value{
+        padding-top: 10px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
+.extract-table-row {
+    padding: 15px 20px 15px 20px;
+    @extend %row-border;
+    height: 80px;
+
+    &.odd-row {
+        background-color: $extract-table-gray-light;
+    }
+
+    &.even-row {
+        background-color: $extract-table-white;
+    }
+
+    .info-text{
+        font-size: 14px;
+        line-height: 16px;
+    }
+      
+    .date-mark{
+        padding-top: 10px;
+        line-height: 20px;
+        font-size: 18px;
+    }
+    
+    .value-text{
+        padding-top: 10px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+}

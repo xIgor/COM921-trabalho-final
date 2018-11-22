@@ -1,0 +1,25 @@
+{
+    "code": 200,
+    "message": "success",
+    "data": {
+        "initialValue": "R$ 5.000,00",
+        "finalValue": "R$ 7.500,00",
+        "period": "30 dias",
+        "entries": [
+            {
+                "id": 1,
+                "date": "19/Set",
+                "type": "in",
+                "value": "R$ +5.000,00",
+                "description": "Investimento em CDB Liquidez Diária"
+            },
+            {
+                "id": 2,
+                "date": "30/Set",
+                "type": "out",
+                "value": "R$ -2.500,00",
+                "description": "Resgate."
+            }
+        ]
+    }
+}

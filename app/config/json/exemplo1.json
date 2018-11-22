@@ -1,0 +1,32 @@
+{
+    "code": 200,
+    "message": "success",
+    "data": {
+        "posts": [
+            {
+                "id": 1,
+                "title": "Vantagens de solicitar um Financiamento",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique.",
+                "img": "https://picsum.photos/128/80"
+            },
+            {
+                "id": 2,
+                "title": "Vantagens de solicitar um Financiamento",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique.",
+                "img": "https://picsum.photos/128/80"
+            },
+            {
+                "id": 3,
+                "title": "Vantagens de solicitar um Financiamento",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique.",
+                "img": "https://picsum.photos/128/80"
+            },
+            {
+                "id": 4,
+                "title": "Vantagens de solicitar um Financiamento",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, neque at tristique.",
+                "img": "https://picsum.photos/128/80"
+            }
+        ]
+    }
+}

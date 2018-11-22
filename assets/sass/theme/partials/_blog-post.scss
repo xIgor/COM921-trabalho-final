@@ -1,0 +1,17 @@
+.blog-post {
+    margin-bottom: $spacer;
+    background-color: #fff;
+    background-clip: border-box;
+    box-shadow: 1px 2px 4px rgba(168, 168, 168, 0.25);
+    border-radius: $blog-post-border-radius;
+
+    .blog-post-img {
+        border-top-left-radius: calc(#{$card-border-radius} - 1px);
+        border-bottom-left-radius: calc(#{$card-border-radius} - 1px);
+    }
+
+    .blog-post-title {
+        font-weight: bold;
+        color: $blog-post-color1;
+    }
+}
