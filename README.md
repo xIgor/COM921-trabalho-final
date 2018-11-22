@@ -200,32 +200,3 @@ API.get('/exemplo1').done(res => {
     }
 });
 ```
-
-# Prova
-
-Faça um fork e clone clone esse projeto, crie um branch (pode ser com o seu nome). Siga as instruções do início do [README](https://github.com/incluirtecnologia/PhpStartWebApp/blob/master/README.md) para instalar as dependências e executar a aplicação.
-
-## A Prova!
-A idéia da prova é implementar a página proposta nos arquivos **prova.png**, **prova_320.png** e **prova_320_menu.png**.
-
-1. Crie uma nova rota para o seu layout;
-2. Os dados devem ser carregados a partir do arquivo **app/config/json/prova.json**;
-4. Crie componentes com foco em organização e reutilição. Use os exemplos contidos no projeto para se inspirar. Eles podem ser visualizados na rota `/exemplo`;
-5. Não se esqueça de implementar a versão mobile.
-
-### Regras
-- O projeto utiliza Bootstrap 4, Sass, JQuery e Vue. O uso do Bootstrap e Sass é obrigatório. Usar o Vue é desejável;
-- Quando possível utilize componentes disponíveis no Bootstrap;
-- Evite editar o arquivo **prova.json** (o objetivo é apenas simular a resposta de uma api). No entanto, caso encontre erros faça as correções necessárias e descreva ao final o que foi modificado;
-- Para as imagens, pode adicionar algumas imagens *fake* ao projeto ou usar um [lorem picsum](https://picsum.photos/) da vida;
-- Lembre-se: a sua implementação não precisa ser perfeita. Dê o seu melhor e crie a página da melhor forma que conseguir, mesmo que alguns elementos fiquem faltando. Nós vamos avaliar como você trabalhou.
-
-### Avaliação
-Avaliaremos os seguintes pontos no seu trabalho:
-
-- Resultado funcional
-- Resultado visual
-- Manutenabilidade do código
-- Clareza e limpeza do código
-- Semântica HTML
-- Lógica de programação
