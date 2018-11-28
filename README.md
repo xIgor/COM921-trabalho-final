@@ -37,8 +37,8 @@ Caso necessite instalar dependências, via **composer** ou **npm**, utilize os c
 
 - NPM
 ```sh
-# acessa o container phpstart-node
-docker exec -it phpstart-node sh
+# acessa o container node
+docker exec -it unifeijs sh
 # rodar comandos dentro do container
 # npm i vue --save
 ```
@@ -46,7 +46,7 @@ docker exec -it phpstart-node sh
 - Composer
 ```sh
 # atualizar dependências do php
-docker exec -it phpstart sh
+docker exec -it unifeiphp sh
 # composer require pimple/pimple
 # composer update
 ```
