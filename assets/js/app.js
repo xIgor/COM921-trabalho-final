@@ -15,6 +15,8 @@ require('./lib/VueFilters');
 import { ApiService } from './lib/ApiService';
 global.API = new ApiService();
 
+
+
 (function($){
 
     PrettyAlerts.init();

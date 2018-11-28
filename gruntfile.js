@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                     }
                 ],
                 options: {
-                    transform: [["babelify", { presets: ["env"] }]],
+                    transform: [["babelify", { presets: ["env"] }], ['vueify']],
                     browserifyOptions: {
                         debug: false
                     }
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                     }
                 ],
                 options: {
-                    transform: [["babelify", { presets: ["env"] }]],
+                    transform: [["babelify", { presets: ["env"] }], ['vueify']],
                     browserifyOptions: {
                         debug: true
                     }

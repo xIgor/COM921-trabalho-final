@@ -1,10 +1,9 @@
 // Font Awesome 5
-$fa-font-path:  '../fonts';
+$fa-font-path: "../fonts";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
-
 
 // Bootstrap
 
@@ -12,16 +11,14 @@ $fa-font-path:  '../fonts';
 @import "../../../node_modules/bootstrap/scss/functions";
 
 // Variable overrides
-@import 'variables';
+@import "variables";
 
 // Main file
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-
 // Custom componentes
 @import "partials/blog-post";
 @import "partials/extract-table";
-
 
 head {
     height: 56px;

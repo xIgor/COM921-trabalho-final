@@ -1,29 +1,19 @@
-<div class="welcome-section d-flex align-items-center mb-3">
-    <div class="mx-auto text-center text-white">
-        <h1 class="font-weight-normal">Bem-vindo ao PhpStartWebApp</h1>
-        <p class="lead font-weight-normal">Projeto base para aplicações de frontend</p>
+<div class="row ">
+    <div class="col">
+        <h1 class="text-center my-4">Dashboard</h1>
     </div>
 </div>
 
-<div class="container">
-
-    <div class="mb-3">
-        <h2 class="text-center">Onde começar</h2>
-        <hr>
-        <p>Crie uma nova rota adicionando uma nova entrada ao arquivo <code>app/config/template-routes.php</code></p>
-        <pre><code>
-            [
-                'pattern' => '/exemplo',
-                'callback' => function () {
-                    $layout = new View\Layout();
-                    $layout
-                        ->addStylesheet('/css/exemplo')
-                        ->addScript('/js/exemplo')
-                        ->render('exemplo/index');
-                }
-            ],
-        </code></pre>
-        <p>Acesse a rota <a href="/exemplo">/exemplo</a> para ver exemplos de componentes construídos com os recursos disponíveis no projeto.</p>
+<div class="row" id="dashboardParent">
+    <div class="col">
+        <h4 class="text-center">Gŕafico de Barras e Linha</h4>
+        <bar-line-chart></bar-line-chart>
     </div>
-
+    <div class="col">
+        <h4 class="text-center">Gŕafico de Box Plot</h4>
+    </div>
+    <div class="col">
+        <h4 class="text-center">Gŕafico de Barras Duplas</h4>
+        <double-bar-chart></double-bar-chart>
+    </div>
 </div>

@@ -1,32 +1,24 @@
+import BarLineChart from "./lib/vue.components/BarLineChart.vue";
+import DoubleBarChart from "./lib/vue.components/DoubleBarChart.vue";
 
+var dashboardData = {
+    
+};
 
-const contactForm = new Vue({
-    el: '#contactForm',
-    data: {
-        name: '',
-        email: '',
-        message: ''
-    },
+var dashboardApp = new Vue({
+    el: '#dashboardParent',
+    data: dashboardData,
     methods: {
-        sendMessage($event) {
-
-            $.post('/contact', {
-                name: this.name,
-                email: this.email,
-                message: this.message
-            }, null, 'json').then(r => {
-                console.log(r);
-            }, err => {
-                console.log(err.responseJSON);
-            });
-
-            $event.preventDefault();
-            $event.stopPropagation();
-        }
+        
     },
     computed: {
-        isValid() {
-            return this.name && this.email && this.message;
-        }
+        
+    },
+    created: function(){
+        
+    },
+    components: {
+        BarLineChart,
+        DoubleBarChart
     }
 });
