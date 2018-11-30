@@ -17,11 +17,11 @@ global.API = new ApiService();
 
 
 
-(function($){
+(function ($) {
 
     PrettyAlerts.init();
     AjaxForm.init('.intec-ajax-form');
     FormValidator.init('.intec-form-validator');
     ZipFinder.init();
-    
+
 })(jQuery);
