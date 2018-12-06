@@ -1,24 +1,13 @@
 @import 'theme/main';
 
-.welcome-section {
-    background: url('/img/bison.jpg') center / cover;
-    background-color: rgba(#000, 0.7);
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-@include media-breakpoint-up(xs) {
-    .welcome-section {
-        min-height: 300px;
-    }
-}
-
-@include media-breakpoint-up(sm) {
-    .welcome-section {
-        min-height: 400px;
-    }
-}
-
-@include media-breakpoint-up(md) {
-    .welcome-section {
-        min-height: 550px;
-    }
+.header {
+    height: 70px;
+    width: 100%;
+    background-color: #6D2080;
+    position: absolute;
+    top: 0;
 }

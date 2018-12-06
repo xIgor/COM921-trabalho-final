@@ -3,6 +3,7 @@ import { Line, Bar } from "vue-chartjs";
 
 export default {
   extends: Bar,
+  name: "tiazona",
   data: function() {
     return {};
   },
@@ -25,7 +26,17 @@ export default {
           backgroundColor: "rgb(255, 99, 132)"
         }
       ],
-      labels: ["January", "February", "March", "April"]
+      labels: ["January", "February", "March", "April"],
+      options: {
+        onClick: function(evt) {
+          console.log("dfjkdlf");
+          var activeElement = this.tooltipActive[0];
+          if (typeof activeElement == "undefined") {
+            return;
+          }
+          alert(activeElement._model.label);
+        }
+      }
     });
   }
 };

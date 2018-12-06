@@ -15,6 +15,7 @@ require('./lib/VueFilters');
 import { ApiService } from './lib/ApiService';
 global.API = new ApiService();
 
+import Chart from "chart.js";
 
 
 (function ($) {

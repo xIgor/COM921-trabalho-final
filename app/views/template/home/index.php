@@ -1,20 +1,23 @@
+<div class="header">
+    <h2 class="text-white text-center mt-3">COM921 - Trabalho Final</h2>
+</div>
+
 <div class="row ">
     <div class="col">
-        <h1 class="text-center my-4">Dashboard</h1>
+        <h1 class="text-center my-4 text-primary">Dashboard</h1>
     </div>
 </div>
 
-<div class="row" id="dashboardParent">
-    <div class="col">
-        <h4 class="text-center">Gráfico de Barras e Linha</h4>
-        <bar-line-chart></bar-line-chart>
+<div id="dashboardParent">
+    <div class="row justify-content-center mb-5">
+        <div class="col-10 col-sm-7">
+            <h4 class="text-center">Gráfico de Barras e Linha</h4>
+            <canvas id="regionChart" width="100%"></canvas>
+        </div>
     </div>
-    <div class="col">
-        <h4 class="text-center">Gráfico de Área Polar</h4>
-        <polar-area-chart></polar-area-chart>
-    </div>
-    <div class="col">
-        <h4 class="text-center">Gráfico de Barras Duplas</h4>
-        <double-bar-chart></double-bar-chart>
-    </div>
+
+    
 </div>
+
+
+<div class="mb-4"></div>
