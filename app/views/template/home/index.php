@@ -11,8 +11,15 @@
 <div id="dashboardParent">
     <div class="row justify-content-center mb-5">
         <div class="col-10 col-sm-7">
-            <h4 class="text-center">Gráfico de Barras e Linha</h4>
+            <h4 class="text-center">Porcentagem de Reclamações por Região</h4>
             <canvas id="regionChart" width="100%"></canvas>
+        </div>
+    </div>
+
+     <div class="row justify-content-center mb-5" v-show="showStateChart">
+        <div class="col-10 col-sm-7">
+            <h4 class="text-center">Porcentagem de Reclamações por Estados - Região {{selectedRegion}}</h4>
+            <canvas id="stateChart" width="100%"></canvas>
         </div>
     </div>
 

@@ -1,3 +1,16 @@
+const generateColor = (colorQuantity) => {
+    let colorArray = [];
+    for(let i = 0; i < colorQuantity; i++){
+        var r = Math.floor(Math.random() * 256); // Random between 0-255
+        var g = Math.floor(Math.random() * 256); // Random between 0-255
+        var b = Math.floor(Math.random() * 256); // Random between 0-255
+        var rgb = "rgba(" + r + "," + g + "," + b + ", 0.5)"; // Collect all to a string
+        colorArray.push(rgb);
+    }
+   
+    return colorArray;
+};
+
 let regionChartConfig = {
     type: "doughnut",
     data: {
@@ -63,17 +76,6 @@ let stateChartData = {
     }
 };
 
-const generateColor = (colorQuantity) => {
-    let colorArray = [];
-    for(let i = 0; i < colorQuantity; i++){
-        var r = Math.floor(Math.random() * 256); // Random between 0-255
-        var g = Math.floor(Math.random() * 256); // Random between 0-255
-        var b = Math.floor(Math.random() * 256); // Random between 0-255
-        var rgb = "rgb(" + r + "," + g + "," + b + ")"; // Collect all to a string
-        colorArray.push(rgb);
-    }
-   
-    return colorArray;
-};
+
 
 export { regionChartConfig, stateChartData };
