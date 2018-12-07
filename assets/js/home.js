@@ -127,6 +127,43 @@ var dashboardApp = new Vue({
                             );
                             this.companyChart.data.labels = Object.keys(result);
                             this.companyChart.update();
+
+                            
+                            this.companyChartCxt.onclick = async evt => {
+                                var activePoints = this.companyChart.getElementsAtEventForMode(
+                                    evt,
+                                    "point",
+                                    this.companyChart.options
+                                );
+        
+                                var firstPoint = activePoints[0];
+                                var label = this.companyChart.data.labels[
+                                    firstPoint._index
+                                ];
+                                try {
+                                    this.showRatingChart = true;
+                                    this.selectedCompany = label;
+        
+                                    let result = (await API.post(
+                                        `/company/semester-evaluation`,
+                                        {
+                                            company: label
+                                        }
+                                    )).data.evaluation;
+        
+                                    self.scrollBy({ top: 500, behavior: "smooth" });
+        
+                                    this.companyMeanRating.data.datasets[0].data = Object.values(
+                                        result
+                                    );
+                                    this.companyMeanRating.data.labels = Object.keys(result);
+                                    this.companyMeanRating.update();
+                                } catch(error){
+                                    console.log(error);
+                                }
+                            }
+
+
                         } catch (error) {
                             console.warn(error);
                         }
@@ -137,6 +174,6 @@ var dashboardApp = new Vue({
             };
         } catch (error) {
             console.warn(error);
-        }
+        };
     }
 });

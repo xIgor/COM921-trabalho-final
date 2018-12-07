@@ -124,6 +124,10 @@ let ratingConfig = {
             data: [
               
             ],
+            backgroundColor: generateSameColor(
+                6,
+                "rgba(54, 162, 235, 0.5)"
+            ),
           
             label: 'Média de Reclamações por Mês'
         }],
