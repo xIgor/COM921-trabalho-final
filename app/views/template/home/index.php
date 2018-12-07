@@ -32,7 +32,7 @@
 
     <div class="row justify-content-center mb-5" v-show="showRatingChart">
         <div class="col-10 col-sm-7">
-            <h4 class="text-center">Média de Reclamações por Mẽs - Empresa {{selectedCompany}}</h4>
+            <h4 class="text-center">Média de Reclamações por Mês - Empresa {{selectedCompany}}</h4>
             <canvas id="ratingChart" width="100%"></canvas>
         </div>
     </div>
