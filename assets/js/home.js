@@ -1,5 +1,10 @@
 import regeneratorRuntime from "regenerator-runtime"; // async await
-import { regionChartConfig, stateChartData } from "./chartData";
+import {
+    regionChartConfig,
+    stateChartData,
+    companyConfig,
+    ratingConfig
+} from "./chartData";
 
 var dashboardData = {
     regionChartCxt: null,
@@ -13,7 +18,16 @@ var dashboardData = {
     showStateChart: false,
     showCompanyChart: false,
     showRatingChart: false,
-    selectedRegion: '',
+    selectedRegion: "",
+    selectedState: "",
+    selectedCompany: "",
+    regionName: {
+        SE: "Sudeste",
+        N: "Norte",
+        S: "Sul",
+        CO: "Centro Oeste",
+        NE: "Nordeste"
+    }
 };
 
 var dashboardApp = new Vue({
@@ -31,7 +45,21 @@ var dashboardApp = new Vue({
                 this.stateChartCxt = document.getElementById("stateChart");
                 this.stateChart = new Chart(this.stateChartCxt, stateChartData);
 
-                resolve(1);
+                this.companyChartCxt = document.getElementById("companyChart");
+                this.companyChart = new Chart(
+                    this.companyChartCxt,
+                    companyConfig
+                );
+
+                this.companyMeanRatingCxt = document.getElementById(
+                    "ratingChart"
+                );
+                this.companyMeanRating = new Chart(
+                    this.companyMeanRatingCxt,
+                    ratingConfig
+                );
+
+                resolve(true);
             });
         }
     },
@@ -56,7 +84,7 @@ var dashboardApp = new Vue({
                 var label = this.regionChart.data.labels[firstPoint._index];
                 try {
                     this.showStateChart = true;
-                    this.selectedRegion = label;
+                    this.selectedRegion = this.regionName[label];
 
                     let result = (await API.post(`/state/complaint-rate`, {
                         region: label
@@ -69,6 +97,40 @@ var dashboardApp = new Vue({
                     );
                     this.stateChart.data.labels = Object.keys(result);
                     this.stateChart.update();
+
+                    this.stateChartCxt.onclick = async evt => {
+                        var activePoints = this.stateChart.getElementsAtEventForMode(
+                            evt,
+                            "point",
+                            this.stateChart.options
+                        );
+
+                        var firstPoint = activePoints[0];
+                        var label = this.stateChart.data.labels[
+                            firstPoint._index
+                        ];
+                        try {
+                            this.showCompanyChart = true;
+                            this.selectedState = label;
+
+                            let result = (await API.post(
+                                `/state/complaint-company`,
+                                {
+                                    state: label
+                                }
+                            )).data.companies;
+
+                            self.scrollBy({ top: 500, behavior: "smooth" });
+
+                            this.companyChart.data.datasets[0].data = Object.values(
+                                result
+                            );
+                            this.companyChart.data.labels = Object.keys(result);
+                            this.companyChart.update();
+                        } catch (error) {
+                            console.warn(error);
+                        }
+                    };
                 } catch (error) {
                     console.warn(error);
                 }

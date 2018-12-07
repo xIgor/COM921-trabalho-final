@@ -16,14 +16,28 @@
         </div>
     </div>
 
-     <div class="row justify-content-center mb-5" v-show="showStateChart">
+    <div class="row justify-content-center mb-5" v-show="showStateChart">
         <div class="col-10 col-sm-7">
             <h4 class="text-center">Porcentagem de Reclamações por Estados - Região {{selectedRegion}}</h4>
             <canvas id="stateChart" width="100%"></canvas>
         </div>
     </div>
 
-    
+    <div class="row justify-content-center mb-5" v-show="showCompanyChart">
+        <div class="col-10 col-sm-7">
+            <h4 class="text-center">Empresas com Maior Número de Reclamações - Estado {{selectedState}}</h4>
+            <canvas id="companyChart" width="100%"></canvas>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mb-5" v-show="showRatingChart">
+        <div class="col-10 col-sm-7">
+            <h4 class="text-center">Média de Reclamações por Mẽs - Empresa {{selectedCompany}}</h4>
+            <canvas id="ratingChart" width="100%"></canvas>
+        </div>
+    </div>
+
+
 </div>
 
 
